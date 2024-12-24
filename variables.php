@@ -1,5 +1,24 @@
 <?php 
 
+// constant variable
+define("NAME", "Dainji");
+define("AGE", 18);
+
+const a = 18;
+echo a;
+echo "<br>";
+function x() {
+    echo "My name is " . NAME . " and i am " . AGE . " years old<br>";
+}
+x();
+define("cars", [
+    "Alfa Romeo",
+    "BMW",
+    "Toyota"
+]);
+echo cars[0];
+
+// variable
 $int = 1;
 $string = 'Dainji';
 $float = 1.1;
@@ -11,6 +30,8 @@ echo "My name is $string <br>";
 echo "<pre>";
 
 var_dump($int, $string, $float, $bool, $array);
+
+print_r($array);
 
 /** GLOBAL SCOPE */
 
