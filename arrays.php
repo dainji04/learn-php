@@ -32,3 +32,13 @@ $c["color"] = "red";
 array_push($c, "banana", "apple");
 $c += ["size" => "big", "x" => "y"];
 var_dump($c);
+
+// remove array
+$d=array(1, 2, 3);
+array_splice($d, 1, 1);
+unset($d["color"], $d["size"]);
+var_dump($d);
+
+// cut array
+$x = array_slice($d, 1, 1);
+var_dump($x);
