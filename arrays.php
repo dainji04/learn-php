@@ -30,6 +30,7 @@ $c["message"]();
 $c[] = "apple";
 $c["color"] = "red";
 array_push($c, "banana", "apple");
+
 $c += ["size" => "big", "x" => "y"];
 var_dump($c);
 
@@ -41,4 +42,9 @@ var_dump($d);
 
 // cut array
 $x = array_slice($d, 1, 1);
-var_dump($x);
+$s = array_diff($c, ["y", "dell"]); // remove all values in array c without y and dell (p/s: not key)
+var_dump($s);
+
+//remove the last item
+array_pop($d);
+var_dump($d);
