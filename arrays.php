@@ -71,7 +71,7 @@ for ($i = 0; $i < count($cars); $i++) {
 }
 
 // implode: convert array to string
-echo "this is merge array:" . implode(" + ", $d) . "<br>";
+echo "this is implode array:" . implode(" + ", $d) . "<br>";
 
 // merge array: 
 $list1 = array("a" => "apple", "b" => "banana");
@@ -79,3 +79,16 @@ $list2 = array("c" => "cherry", "d" => "dell");
 $list3 = array_merge($list1, $list2);
 
 print_r($list3);
+
+// in_array: check if a value exists in an array
+echo in_array("apple", $list3) . "<br>"; // RETURN POSITION OF VALUE IF IT EXISTS
+
+// array_key: return all keys of an array
+print_r(array_keys($list3));
+
+// array_search: search someone key in an array
+echo array_search("apple", $list3) . "<br>"; // return key of value if it exists
+
+// array_unique: remove all duplicate values in an array
+// array_column: return all values of a key in an array
+print_r(array_column(($cars), 0)); // return all values of key 0 in array cars
