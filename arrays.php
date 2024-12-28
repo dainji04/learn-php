@@ -18,11 +18,12 @@ $b["model"] = "dell";
 
 var_dump($b);
 
-function myFunction() {
+function myFunction()
+{
     echo "i am a function";
 }
 // create array
-$c = array("model" => "dell", "year"=>2004, "message" => "myFunction");
+$c = array("model" => "dell", "year" => 2004, "message" => "myFunction");
 
 $c["message"]();
 
@@ -35,7 +36,7 @@ $c += ["size" => "big", "x" => "y"];
 var_dump($c);
 
 // remove array
-$d=array(1, 2, 3);
+$d = array(1, 2, 3);
 array_splice($d, 1, 1);
 unset($d["color"], $d["size"]);
 var_dump($d);
@@ -47,4 +48,24 @@ var_dump($s);
 
 //remove the last item
 array_pop($d);
+//remove the first item
+array_shift($d);
+// add to the last
+array_push($d, "apple", "banana");
+// add to the first
+array_unshift($d, "cherry");
 var_dump($d);
+
+$cars = array(
+    array("Volvo", 22, 18),
+    array("BMW", 15, 13),
+    array("Saab", 5, 2),
+    array("Land Rover", 17, 15)
+);
+
+for ($i = 0; $i < count($cars); $i++) {
+    for ($j = 0; $j < count($cars[$i]); $j++) {
+        echo $cars[$i][$j] . " ";
+    }
+    echo "<br>";
+}
