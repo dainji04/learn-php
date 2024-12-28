@@ -69,3 +69,13 @@ for ($i = 0; $i < count($cars); $i++) {
     }
     echo "<br>";
 }
+
+// implode: convert array to string
+echo "this is merge array:" . implode(" + ", $d) . "<br>";
+
+// merge array: 
+$list1 = array("a" => "apple", "b" => "banana");
+$list2 = array("c" => "cherry", "d" => "dell");
+$list3 = array_merge($list1, $list2);
+
+print_r($list3);
