@@ -33,6 +33,9 @@ $x = ["vue" => 1000, "react" => 2000, "angular" => 3000];
 
 // fwrite($file, json_encode($x));
 
-echo fread($file, filesize("courses.txt"));
+$content = fread($file, filesize("courses.txt"));
+echo $content;
 
 fclose($file);
+
+unlink("courses.txt");
