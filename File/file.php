@@ -29,13 +29,36 @@ $file = fopen("courses.txt", "a+"); // read and write, if file not exist then cr
 //     "C#" => 5000
 // ];
 
-$x = ["vue" => 1000, "react" => 2000, "angular" => 3000];
+// $x = ["vue" => 1000, "react" => 2000, "angular" => 3000];
 
-// fwrite($file, json_encode($x));
+// // fwrite($file, json_encode($x));
 
-$content = fread($file, filesize("courses.txt"));
-echo $content;
+// $content = fread($file, filesize("courses.txt"));
+// echo $content;
 
-fclose($file);
+// fclose($file);
 
-unlink("courses.txt");
+// unlink("courses.txt");
+
+// echo __FILE__ . PHP_EOL;
+
+// echo __DIR__ . PHP_EOL;
+
+// echo dirname(__FILE__) . PHP_EOL;
+
+// echo dirname(__DIR__) . PHP_EOL;
+
+// echo basename(__FILE__) . PHP_EOL;
+
+// echo dirname(__DIR__) . PHP_EOL;
+
+// echo realpath("file.php") . PHP_EOL;
+
+// print_r(pathinfo(__FILE__));
+
+/** REQUIRE, REQUIRE ONCE AND INCLUDE, INCLUDE ONCE */
+
+require_once("./requireFile.php"); // relative path
+// require_once(__DIR__ . "/requireFile.php"); - ABSOLUTE PATH
+
+print_r($config); // array
