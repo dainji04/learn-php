@@ -63,6 +63,22 @@
             <button type="submit" class="btn btn-primary">Uploads</button>
         </form>
     </div>
+    <?php
+    $scanDir = scandir("uploads"); // scan all of file/directory in path
+    echo "<div class='container'>";
+    echo "<h3>File in directory</h3>";
+    echo "<ul>";
+    if (count($scanDir) > 2) {
+        for ($i = 2; $i < count($scanDir); $i++) {
+            echo "<li style='display: flex; justify-content: space-between; align-items: center;'>";
+            echo "<p style='color: #fff'>$scanDir[$i]</p>";
+            echo "<a href='delete.php?file=$scanDir[$i]'>Delete</a>";
+            echo "</li>";
+        }
+    }
+    echo "</ul>";
+    echo "</div>";
+    ?>
 </body>
 
 </html>
